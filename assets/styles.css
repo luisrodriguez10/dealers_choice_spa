@@ -10,7 +10,7 @@ h1{
 
 main{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
 }
 
