@@ -1,9 +1,41 @@
 body{
     font-family: 'Courier New', Courier, monospace;
     padding: 1rem;
+    background-color: beige;
+}
+
+h1{
+    text-align: center;
 }
 
 main{
     display: flex;
     justify-content: space-between;
+    
+}
+
+#players-list{
+    list-style-type: none;
+}
+
+#players-list > *{
+    padding: 0.5rem;
+}
+
+#info-list{
+    list-style-type: none;
+}
+
+.selected a{
+    color: cadetblue;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form > *{
+    margin: 0.5rem;
 }

@@ -30,6 +30,7 @@ const Player = conn.define("player", {
     validate: {
       notEmpty: true,
     },
+    defaultValue: 'Team not assigned'
   },
   nationality: {
     type: STRING,
@@ -37,6 +38,7 @@ const Player = conn.define("player", {
     validate: {
       notEmpty: true,
     },
+    defaultValue: 'Nationality not defined'
   },
 });
 

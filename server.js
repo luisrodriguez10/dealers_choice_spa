@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const { seeder, Player } = require("./db");
 
+app.use(express.json());
 app.use("/assets", express.static("assets"));
 app.use("/dist", express.static("dist"));
 
@@ -16,6 +17,14 @@ app.get("/api/players", async (req, res, next) => {
   }
 });
 
+app.get("/api/players/:id", async (req, res, next) => {
+    try {
+      res.send(await Player.findByPk(req.params.id));
+    } catch (ex) {
+      next(ex);
+    }
+  });
+
 app.delete(`/api/players/:id`, async (req, res, next) => {
   try {
     const player = await Player.findByPk(req.params.id);
@@ -28,7 +37,7 @@ app.delete(`/api/players/:id`, async (req, res, next) => {
 
 app.post("/api/players", async (req, res, next) => {
   try {
-    res.status(201).send(await Thing.create(req.body));
+    res.status(201).send(await Player.create(req.body));
   } catch (ex) {
     next(ex);
   }

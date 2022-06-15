@@ -11,14 +11,21 @@
   <body>
     <h1>The Acme Soccer Players</h1>
     <main>
-      <div>
+      <div id="player">
         <h3>The Players</h3>
         <ul id="players-list"></ul>
       </div>
-      <div>
+      <div id="add-player">
         <h3>Add an Acme Player</h3>
+        <form action="">
+            <input id="firstName" type="text" name="firstName" placeholder="First Name">
+            <input id="lastName" type="text" name="lastName" placeholder="Last Name">
+            <input id="currentTeam" type="text" name="currentTeam" placeholder="Curren Team">
+            <input id="nationality" type="text" name="nationality" placeholder="Nationality">
+            <button>Create</button>
+        </form>
       </div>
-      <div>
+      <div id="player-info">
         <h3>Player Info</h3>
         <ul id="info-list"></ul>
       </div>
